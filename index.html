@@ -169,17 +169,17 @@
       Plotly.relayout("plot", { shapes: allShapes() });
     };
 
-    // download current view
-    document.getElementById("download-btn").onclick = () => {
-      const gd = document.getElementById("plot"), cr = gd.layout.xaxis3.range;
-      Plotly.relayout(gd, {
-        "xaxis.range": cr,
-        "xaxis2.range": cr,
-        "xaxis3.range": cr
-      }).then(() => {
-        Plotly.downloadImage(gd, { format:"png", filename:"BG_Inputs" });
-      });
-    };
+    // // download current view
+    // document.getElementById("download-btn").onclick = () => {
+    //   const gd = document.getElementById("plot"), cr = gd.layout.xaxis3.range;
+    //   Plotly.relayout(gd, {
+    //     "xaxis.range": cr,
+    //     "xaxis2.range": cr,
+    //     "xaxis3.range": cr
+    //   }).then(() => {
+    //     Plotly.downloadImage(gd, { format:"png", filename:"BG_Inputs" });
+    //   });
+    // };
 
     // initial plot
     const gd = document.getElementById("plot");
