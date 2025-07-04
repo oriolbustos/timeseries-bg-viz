@@ -62,7 +62,7 @@
 
   <div style="max-width: 900px; margin: 0 auto;">
     <p style="text-align:center; font-size:0.9em; color:#444; margin-top:-0.3em;">
-      Use the buttons above to toggle the glycemic zones and download the current view.
+      Use the buttons above to toggle the glycemic zones.
       Zoom in by selecting a range with the slider at the bottom, reset view with the home-icon, and pan/zoom as needed.
     </p>
   </div>
@@ -168,18 +168,6 @@
       document.getElementById("toggle-zones").textContent = zonesOn ? "Zones Off" : "Zones On";
       Plotly.relayout("plot", { shapes: allShapes() });
     };
-
-    // // download current view
-    // document.getElementById("download-btn").onclick = () => {
-    //   const gd = document.getElementById("plot"), cr = gd.layout.xaxis3.range;
-    //   Plotly.relayout(gd, {
-    //     "xaxis.range": cr,
-    //     "xaxis2.range": cr,
-    //     "xaxis3.range": cr
-    //   }).then(() => {
-    //     Plotly.downloadImage(gd, { format:"png", filename:"BG_Inputs" });
-    //   });
-    // };
 
     // initial plot
     const gd = document.getElementById("plot");
